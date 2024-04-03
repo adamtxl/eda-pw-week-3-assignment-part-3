@@ -5,13 +5,13 @@ console.log('****** Part Supply *******');
 //    & console.log the variable
 console.log('1. Number of partsNeeded:');
 let partsNeeded = 40;
-console.log ('Number of parts needed:' , partsNeeded);
+console.log('Number of parts needed:', partsNeeded);
 
 // 2. Create a variable call 'supplyChanges' set it to an array containing
 //    the following numbers: 3, 5, -6, 0, 7, 11
 console.log('2. Array of supplyChanges:');
-let supplyChanges =[3, 5, -6, 0, 7, 11];
-console.log('The number of supply changes is:' , supplyChanges);
+let supplyChanges = [3, 5, -6, 0, 7, 11];
+console.log('The number of supply changes is:', supplyChanges);
 
 // 3. Console log the value of the second item in the 'supplyChanges' array
 console.log('3. Second supplyChange is:');
@@ -21,18 +21,32 @@ console.log('The second supply change is:', supplyChanges[1]);
 //    array & console.log the value removed.
 console.log('4. Removed item:');
 
-removedItem = supplyChanges.pop
-
+removedItem = supplyChanges.pop();
+console.log('The Removed item is:', removedItem);
 // 5. A delivery of 25 more parts arrived. Add the value 25 to the end of the array
 console.log('5. Adding 25 to supplyChanges.');
 
+supplyChanges.push(25);
+console.log('Check out the full supply changes!', supplyChanges);
 // 6. Write a `for` loop that shows each value in the 'supplyChanges' array
 //    Use a console.log formatted as follows, where x is the value from the array
 //    - if it is a positive number (greater than 0), log 'Added x parts.' 
 //    - if the value is 0, log 'No Change.'
 //    - if the value is negative, format the log as 'Removed x parts.' 
 console.log('6. Showing supplyChanges...');
+for (let i = 0; i < supplyChanges.length; i++) {
+    let currentItem = supplyChanges[i]
 
+    if (currentItem > 0) {
+        console.log('Added', currentItem, 'parts.')
+    }
+    else if (currentItem === 0) {
+        console.log('No change.')
+    }
+    else if (currentItem < 0) {
+        console.log('Removed', currentItem, 'parts.')
+    }
+}
 
 // STRETCH GOALS
 console.log('---  Stretch Goals  ---');
